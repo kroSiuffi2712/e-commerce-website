@@ -94,7 +94,6 @@ const Main = ({storeData, fetchStores}) =>{
                 <div  className="row">
                 {womenClothing.slice(0,3).map(c => 
                     <div key={`clothing-${c.id}`} className="col-4">
-                        <Link to={`products/${c.id}`}>
                         <img src={c.image} alt=""/>
                         <h4>{c.title}</h4>
                         <div className="rating">
@@ -105,7 +104,7 @@ const Main = ({storeData, fetchStores}) =>{
                             <i className="fa fa-star-o"></i>
                         </div>
                         <p>{`$${c.price}`}</p>
-                        </Link>
+                        <Link to={`products/${c.id}`}></Link>
                     </div>
                 )}    
                 </div>
